@@ -4,9 +4,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+<Router basename={`${process.env.PUBLIC_URL}/`}>
+    <Route exact path='/' component={Home}/>
+</Router>
+
 setTimeout(
   ReactDOM.render(
     <React.StrictMode>
+      <Router basename={`${process.env.PUBLIC_URL}/`}>
+        <Route exact path='/' component={Home}/>
+      </Router>
       <App />
     </React.StrictMode>,
     document.getElementById('root')
