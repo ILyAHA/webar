@@ -11,9 +11,9 @@ import {
 setTimeout(
   ReactDOM.render(
     <React.StrictMode>
-      <Router basename={`${process.env.PUBLIC_URL}/`}>
+      {/* <Router basename={`${process.env.PUBLIC_URL}/`}>
         <Route exact path='/' component={App}/>
-      </Router>
+      </Router> */}
       <App />
     </React.StrictMode>,
     document.getElementById('root')
