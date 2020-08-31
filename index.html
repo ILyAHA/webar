@@ -28,6 +28,7 @@
   AFRAME.registerComponent('markerhandler', {
     init: function () {
       this.el.sceneEl.addEventListener('markerFound', () => {
+        alert("detected")
         // redirect to custom URL
       });
   }});
@@ -43,8 +44,14 @@
         renderer="logarithmicDepthBuffer: true;"
         embedded arjs='trackingMethod: best; source Type: webcam; debugUIEnabled: false;'>
 
+        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        <a-sky color="#ECECEC"></a-sky>
+
         <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
-        <a-nft
+        <!-- <a-nft
             markerhandler
             type='nft' url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex'
             smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
@@ -65,7 +72,7 @@
                 position="50 150 -100"
                 >
             </a-entity> -->
-        </a-nft>
+        </a-nft> -->
 		<a-entity camera></a-entity>
     </a-scene>
 </body>
