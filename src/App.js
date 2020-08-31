@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div class="arjs-loader">
+      <div className="arjs-loader">
         <div>Loading, please wait...</div>
       </div>
       <a-scene
