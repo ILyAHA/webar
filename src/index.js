@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
-<Router basename={`${process.env.PUBLIC_URL}/`}>
-    <Route exact path='/' component={Home}/>
-</Router>
+import {
+  BrowserRouter as Router,
+  Route
+  } from "react-router-dom";
 
 setTimeout(
   ReactDOM.render(
     <React.StrictMode>
       <Router basename={`${process.env.PUBLIC_URL}/`}>
-        <Route exact path='/' component={Home}/>
+        <Route exact path='/' component={App}/>
       </Router>
       <App />
     </React.StrictMode>,
