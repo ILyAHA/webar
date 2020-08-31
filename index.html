@@ -45,10 +45,11 @@
         embedded arjs='trackingMethod: best; source Type: webcam; debugUIEnabled: false;'>
 
         <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
+        <!-- url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex' -->
         <a-nft
             markerhandler
-            type='nft' url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex'
-            smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
+            type='nft' url='./resources/kfc'
+            smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5' size="0.05">
 
             <a-box position='0 0 0' material='opacity: 0.5; side: double;color:red;' scale="5 5 5">
               <a-torus-knot radius='0.26' radius-tubular='0.05'
