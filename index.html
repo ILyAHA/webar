@@ -1,3 +1,6 @@
+<header>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+</header>
 <script src='./aframe.min.js'></script>
 
 <style>
@@ -28,15 +31,16 @@
   console.info('kfc_black300');
   AFRAME.registerComponent('markerhandler', {
     init: function () {
-      this.vid = document.querySelector("#vid");
       this.el.sceneEl.addEventListener('markerFound', () => {
-        this.vid.play();
+        vid = document.querySelector("#vid");
+        vid.play();
         // alert("detected")
         // redirect to custom URL
       });
       this.el.sceneEl.addEventListener('markerLost', function() {
-			  this.vid.pause();
-			  this.vid.currentTime = 0;
+        vid = document.querySelector("#vid")
+			  vid.pause();
+			  vid.currentTime = 0;
       });
   }});
 </script>
